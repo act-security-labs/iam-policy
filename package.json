@@ -1,6 +1,6 @@
 {
   "name": "@actsecurity/iam-policy",
-  "version": "0.1.109",
+  "version": "0.1.110",
   "description": "An ORM for AWS IAM policies",
   "repository": {
     "type": "git",
@@ -38,7 +38,7 @@
     "@actsecurity/prettier-config": "^0.1.0",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/commit-analyzer": "^13.0.1",
-    "@semantic-release/exec": "^7.1.0",    
+    "@semantic-release/exec": "^7.1.0",
     "@semantic-release/git": "^10.0.1",
     "@semantic-release/github": "^12.0.6",
     "@semantic-release/npm": "^13.1.4",
