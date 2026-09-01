@@ -1,6 +1,6 @@
 # IAM Policy Syntax Validator and Parser
 
-[![NPM Version](https://img.shields.io/npm/v/@cloud-copilot/iam-policy.svg?logo=nodedotjs)](https://www.npmjs.com/package/@cloud-copilot/iam-policy) [![License: AGPL v3](https://img.shields.io/github/license/cloud-copilot/iam-policy)](LICENSE.txt) [![GuardDog](https://github.com/cloud-copilot/iam-policy/actions/workflows/guarddog.yml/badge.svg)](https://github.com/cloud-copilot/iam-policy/actions/workflows/guarddog.yml) [![Known Vulnerabilities](https://snyk.io/test/github/cloud-copilot/iam-policy/badge.svg?targetFile=package.json&style=flat-square)](https://snyk.io/test/github/cloud-copilot/iam-policy?targetFile=package.json)
+[![NPM Version](https://img.shields.io/npm/v/@actsecurity/iam-policy.svg?logo=nodedotjs)](https://www.npmjs.com/package/@actsecurity/iam-policy) [![License: AGPL v3](https://img.shields.io/github/license/act-security-labs/iam-policy)](LICENSE.txt) [![GuardDog](https://github.com/act-security-labs/iam-policy/actions/workflows/guarddog.yml/badge.svg)](https://github.com/act-security-labs/iam-policy/actions/workflows/guarddog.yml) [![Known Vulnerabilities](https://snyk.io/test/github/act-security-labs/iam-policy/badge.svg?targetFile=package.json&style=flat-square)](https://snyk.io/test/github/act-security-labs/iam-policy?targetFile=package.json)
 
 This is a simple IAM policy library that allows you to safely parse and navigate IAM policies without worrying about the more difficult details of parsing policies or validating syntax.
 
@@ -13,7 +13,7 @@ This may be updated in the future to allow modifying policies, right now it's re
 This will take any object and return back an array of findings. If the array is empty then the policy is valid.
 
 ```typescript
-import { validatePolicySyntax } from '@cloud-copilot/iam-policy'
+import { validatePolicySyntax } from '@actsecurity/iam-policy'
 
 validatePolicySyntax({
   Version: '2012-10-17',
@@ -95,7 +95,7 @@ There are functions to validate specific policy types, these do all of the gener
 ### Normalizes Policy Elements that are Objects/Array of Objects or String/Array of Strings
 
 ```typescript
-import { loadPolicy } from '@cloud-copilot/iam-policy'
+import { loadPolicy } from '@actsecurity/iam-policy'
 
 //Statement can be an array of objects
 const policyOne = {
@@ -135,7 +135,7 @@ There is similar support for condition values, principals, and resources.
 In IAM policies there are some elements that are mutually exclusive. For example, you can't have a `Principal` and a `NotPrincipal` in the same statement. Some elements are completely optional. We leverage the Typescript type system to make sure you only access data that is confirmed to exist in the policy.
 
 ```typescript
-import{ loadPolicy } from '@cloud-copilot/iam-policy'
+import{ loadPolicy } from '@actsecurity/iam-policy'
 
 const actionPolicy = {
   "Version": "2012-10-17",
@@ -172,7 +172,7 @@ There is similar support for `Action`, `NotAction`, `Principal`, `NotPrincipal`,
 Simplifies complex elements by flattening them into an array of homogenous objects. For example the Principal value can be a string or an object; the object values can be strings or arrays of strings. We flatten those into an array of objects similar to what you would define in a terraform policy.
 
 ```typescript
-import { loadPolicy } from '@cloud-copilot/iam-policy'
+import { loadPolicy } from '@actsecurity/iam-policy'
 
 const principalPolicy = {
   Version: '2012-10-17',
@@ -205,7 +205,7 @@ if (statement.isPrincipalStatement()) {
 There is similar flattening for the `Condition` element.
 
 ```typescript
-import { loadPolicy } from '@cloud-copilot/iam-policy'
+import { loadPolicy } from '@actsecurity/iam-policy'
 
 const principalPolicy = {
   Version: '2012-10-17',
