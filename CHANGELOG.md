@@ -1,3 +1,5 @@
+## [0.1.113](https://github.com/act-security-labs/iam-policy/compare/v0.1.112...v0.1.113) (2026-09-19)
+
 ## [0.1.112](https://github.com/act-security-labs/iam-policy/compare/v0.1.111...v0.1.112) (2026-09-19)
 
 
