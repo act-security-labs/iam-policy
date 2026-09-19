@@ -1,3 +1,10 @@
+## [0.1.112](https://github.com/act-security-labs/iam-policy/compare/v0.1.111...v0.1.112) (2026-09-19)
+
+
+### Bug Fixes
+
+* use updated dependency updater action ([e5bda53](https://github.com/act-security-labs/iam-policy/commit/e5bda536a43495d85f14d24cb6c02e5eddf46528))
+
 ## [0.1.111](https://github.com/act-security-labs/iam-policy/compare/v0.1.110...v0.1.111) (2026-09-01)
 
 ## [0.1.110](https://github.com/act-security-labs/iam-policy/compare/v0.1.109...v0.1.110) (2026-08-31)
