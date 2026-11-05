@@ -5,7 +5,7 @@ export interface ValidationError {
   path: string
 }
 
-const serviceRegex = /^[a-zA-Z0-9-]+$/
+const serviceRegex = /^[a-zA-Z0-9.-]+$/
 const actionRegex = /^[a-zA-Z0-9*\?, \-]+$/
 
 const allowedPolicyKeys = new Set(['Version', 'Statement', 'Id'])
@@ -290,7 +290,7 @@ function validateActionString(string: string, path: string): ValidationError[] {
   if (!serviceRegex.test(service)) {
     errors.push({
       path,
-      message: `Service can only contain letters, numbers, and hyphens`
+      message: `Service can only contain letters, numbers, periods, and hyphens`
     })
   }
   if (action.length > 0 && !actionRegex.test(action)) {

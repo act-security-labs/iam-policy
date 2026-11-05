@@ -158,10 +158,23 @@
     },
     "expectedErrors": [
       {
-        "message": "Service can only contain letters, numbers, and hyphens",
+        "message": "Service can only contain letters, numbers, periods, and hyphens",
         "path": "Statement[0].Action"
       }
     ]
+  },
+  {
+    "name": "Periods in Action and NotAction service prefixes",
+    "policy": {
+      "Version": "2012-10-17",
+      "Statement": [
+        { "Effect": "Allow", "Action": ["example.service:Read", "s3:GetObject"] },
+        { "Effect": "Deny", "NotAction": ["example.service:Write", "s3:PutObject"] },
+        { "Effect": "Allow", "Action": "example.service:*" },
+        { "Effect": "Deny", "NotAction": "example.service:Read" }
+      ]
+    },
+    "expectedErrors": []
   },
   {
     "name": "Service and Action with hyphens",
@@ -176,6 +189,19 @@
       ]
     },
     "expectedErrors": []
+  },
+  {
+    "name": "Period in action name remains invalid",
+    "policy": {
+      "Version": "2012-10-17",
+      "Statement": [{ "Effect": "Allow", "Action": "s3:Get.Object" }]
+    },
+    "expectedErrors": [
+      {
+        "message": "Action can only contain letters, numbers, asterisks, question marks, commas, hyphens, and spaces",
+        "path": "Statement[0].Action"
+      }
+    ]
   },
   {
     "name": "Action with invalid character",
