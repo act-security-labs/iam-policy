@@ -1,3 +1,10 @@
+## [0.1.121](https://github.com/act-security-labs/iam-policy/compare/v0.1.120...v0.1.121) (2026-11-05)
+
+
+### Bug Fixes
+
+* allow periods in action service prefixes ([1ae773f](https://github.com/act-security-labs/iam-policy/commit/1ae773fceed14f16c60e3d24b4f343482e2ca5a2))
+
 ## [0.1.120](https://github.com/act-security-labs/iam-policy/compare/v0.1.119...v0.1.120) (2026-10-31)
 
 ## [0.1.119](https://github.com/act-security-labs/iam-policy/compare/v0.1.118...v0.1.119) (2026-10-31)
