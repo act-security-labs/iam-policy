@@ -1,3 +1,11 @@
+## [0.1.123](https://github.com/act-security-labs/iam-policy/compare/v0.1.122...v0.1.123) (2026-11-09)
+
+
+### Bug Fixes
+
+* pin retry-enabled dependency update action ([38f86a6](https://github.com/act-security-labs/iam-policy/commit/38f86a624612aeca49639cdad9d8e81da402c3d8))
+* stagger dependency update schedule ([7cad24a](https://github.com/act-security-labs/iam-policy/commit/7cad24ab695e7e2e83a2940e79670513b9831a5a))
+
 ## [0.1.122](https://github.com/act-security-labs/iam-policy/compare/v0.1.121...v0.1.122) (2026-11-07)
 
 ## [0.1.121](https://github.com/act-security-labs/iam-policy/compare/v0.1.120...v0.1.121) (2026-11-05)
